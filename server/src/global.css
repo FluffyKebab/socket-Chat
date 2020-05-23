@@ -1,0 +1,123 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+#title {
+    display: inline;
+}
+
+#newChatLink {
+    color: rgb(250, 233, 250);
+    text-decoration: none;
+}
+
+#newChatButton {
+    float: right;
+    border: 0px;
+    padding: 0px;
+    background-color: Transparent;
+    color: rgb(250, 233, 250);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.chatPannel {
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    height: calc(100vh);
+    top: 75px;
+    right: 0;
+    background-color: rgb(128, 93, 128);
+    color: rgb(250, 233, 250);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: clip;
+    transition: 0.2s;
+    padding: 25px;
+}
+
+h1 {
+    margin: 0px;
+    margin-left: 12px;
+}
+
+h4 {
+    margin: 4px;
+}
+
+#chooserContainer {
+    display: fixed;
+    float: left;
+}
+
+.chooser {
+    background-color: rgb(128, 93, 128);
+    color: rgb(250, 233, 250);
+    padding: 25px;
+    display: inline-block;
+    height: calc(100vh - 125px);
+    width: 250px;
+    
+}
+
+.chat {
+    background-color: rgb(248, 218, 248);
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    height: calc(100vh - 150px);
+    width: 300px;
+    
+}
+
+.messages {
+    overflow: scroll;
+    height: calc(100vh - 220px);
+    border-radius: 8px;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(250, 204, 250);
+    border-radius: 2px;
+}
+
+.messageYour {
+    text-align: right;
+}
+
+#top {
+    background-color: rgb(77, 57, 77);
+    color: rgb(250, 233, 250);
+    margin: 0px;
+    padding: 20px;
+}
+
+input[type=text], select {
+    width: 70%;
+    height: 5%;
+    padding: 8px 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 4px;  
+    background-color: #fff ;
+    border: 2px solid #a8a8a8;
+}
+
+input[type=submit] {
+    width: 20%;
+    height: 5%;
+    border-radius: 4px;
+    padding: 8px 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff ;
+    border: 2px solid #a8a8a8;
+}

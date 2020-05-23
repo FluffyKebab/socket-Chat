@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/global"> 
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+        <div id="top">
+            <h1 id="title">Socket Chat</h1>
+                <button id="newChatButton" onclick="switchPannel()">
+                    Lag en ny chat
+                </button>
+        </div>
+
+        <div id="newChatPannel" class="chatPannel">
+            <h1 id="newChatH1">Lag en ny chat:</h1>
+
+            <form id="newChatForm">
+               <input type="text" placeholder="Sett inn chat navn" id="chatNameInput">
+               <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="chooserContainer">
+        </div>
+
+        <div id ="chatContainer">
+        </div>
+
+        <script src="/js/chat"></script>
+        <script src="/js/chooser"></script>
+
+        <script>
+            let chatForm = document.getElementById("newChatForm")
+            let nameInput = document.getElementById("chatNameInput")
+
+            chatForm.addEventListener("submit", e => {
+                e.preventDefault()
+
+                const formData = new FormData()
+                formData.append("name", nameInput.value)
+
+                fetch("/api/newChat", {
+                    method: "post",
+                    body: formData
+                })
+            })
+        </script>
+
+        <script>
+            const chooser = new Chooser()
+            const chat = new Chat("main")
+
+            window.addEventListener("beforeunload", e => {
+               chat.logDate(true)
+            })
+
+            let open = false
+
+            function switchPannel() {
+                let pannel = document.getElementById("newChatPannel")
+                open ? pannel.style.right = "-400px" : pannel.style.right = "0px"
+                open = !open
+            }
+        </script>
+    </body>
+</html>

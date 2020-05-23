@@ -1,0 +1,18 @@
+#newChatContainer {
+    width: 60vw;
+	height: 60vh;
+    background-color: rgb(248, 218, 248);
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    margin: auto;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+#newChatH1 {
+    font-size: min(3vw + 10px, 40px);
+    padding: 0px;
+}
