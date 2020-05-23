@@ -1,3 +1,3 @@
 # socket-Chat
 
-Websoket chat
+Websoket chat skrevet i Go
